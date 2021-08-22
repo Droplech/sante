@@ -53,7 +53,7 @@ $(document).ready(function(){
             prevEl: '#preview-arrow-prev',
         },
         autoplay: {
-            delay: 5000,
+            delay: 6000,
         },
         
         loop: true,
@@ -66,13 +66,45 @@ $(document).ready(function(){
         slidesPerView: 4,
         spaceBetween: 30,
         autoplay: {
-            delay: 5000,
+            delay: 4000,
         },
         
         
     })
+    new Swiper('.reviews_slider',{
+        navigation: {
+            nextEl: '#reviews-next',
+            prevEl: '#reviews-prev',
+        },
+        slidesPerView: 1,
+        autoplay: {
+            delay: 6000,
+        },
+        loop: true,
+        
+    })
 
-
+    new Swiper('.gift_baskets_slider',{
+        navigation: {
+            nextEl: '#gift-arrow-next',
+            prevEl: '#gift-arrow-prev',
+        },
+        autoplay: {
+            delay: 3000,
+        },
+        
+        loop: true,
+    })
+    new Swiper('.instagram_slider',{
+        slidesPerView: 4.35,
+        
+        freeMode: true,
+        autoplay: {
+            delay: 3000,
+        },
+        
+        loop: true,
+    })
 
 
 })
