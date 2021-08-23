@@ -1081,6 +1081,32 @@ ul{
 }
 
 
+.organic_food .title .img img{
+    opacity: 0;
+    -webkit-transform: rotateX(20deg) skew(0deg,15deg) translate(-25px,-20px);
+    transform: rotateX(20deg) skew(0deg,15deg) translate(-25px,-20px);
+}
+.organic_food .title .img._active img{
+    opacity: 1;
+    animation: qodef-falling-leaf 1.2s forwards ease;
+}
+
+@keyframes qodef-falling-leaf {
+    0% {
+        opacity: 0;
+        -webkit-transform: rotateX(20deg) skew(0deg, 15deg) translate(-25px, -20px);
+        transform: rotateX(20deg) skew(0deg, 15deg) translate(-25px, -20px)
+    }
+    50% {
+        -webkit-transform: rotateX(35deg) skew(0deg, -10deg) translate(25px, -10px);
+        transform: rotateX(35deg) skew(0deg, -10deg) translate(25px, -10px)
+    }
+
+    100% {
+        -webkit-transform: rotateX(0) skew(0deg, 0deg) translate(0, 0);
+        transform: rotateX(0) skew(0deg, 0deg) translate(0, 0)
+    }
+}
 
 /* organic_food */
 
@@ -1448,7 +1474,15 @@ ul{
 /*footer  */
 
 
-
+@media screen and (max-width: 1440px){
+    .gift_slider_wrapper .gift_slide_there .txt,
+    .preview_slider_item .txt{
+        top: 20%;
+    }
+    .gift_slider_wrapper .preview_slider_item_first .txt{
+        top: 38%;
+    }
+}
 
 
 
