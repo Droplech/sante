@@ -47,6 +47,60 @@ $(document).ready(function(){
         })
     })
 
+
+
+    $('.user_info .basket').hover(function(){
+        $(this).find('.basket_down_menu').slideDown({
+            duration: 300,
+        })
+    },function(){
+        $(this).find('.basket_down_menu').slideUp({
+            duration: 80,
+        })
+    })
+
+
+    
+
+    $('.search').hover(function(){
+        $(this).addClass('search-active')
+    },function(){
+        $(this).removeClass('search-active')
+    })
+
+    $('.search').click(function(){
+        $('.secrch_block_menu').addClass('secrch_block_menu-active')
+    })
+
+
+
+    $('.btn_close_searchMenu').hover(function(){
+        $(this).addClass('closeSearch-active')
+    },function(){
+        $(this).removeClass('closeSearch-active')
+    })
+    $('.btn_close_searchMenu').click(function(){
+        $('.secrch_block_menu').removeClass('secrch_block_menu-active')
+    })
+
+
+    
+
+    
+
+
+
+
+
+
+
+
+
+
+
+
+
+
     new Swiper('.block_preview_slider',{
         navigation: {
             nextEl: '#preview-arrow-next',
@@ -83,7 +137,6 @@ $(document).ready(function(){
         loop: true,
         
     })
-
     new Swiper('.gift_baskets_slider',{
         navigation: {
             nextEl: '#gift-arrow-next',
@@ -106,5 +159,45 @@ $(document).ready(function(){
         loop: true,
     })
 
+
+    const animItems = document.querySelectorAll('.anim-items')
+
+    if( animItems.length > 0 ){
+        window.addEventListener('scroll', animOnScroll);
+        function animOnScroll(){
+            for (let index = 0; index < animItems.length; index++) {
+                const animItem = animItems[index];
+                const animItemHeight = animItem.offsetHeight;
+                const animItemOffset = offset(animItem).top;
+                const animStart = 4;
+
+                let animItemPoint = window.innerHeight - animItemHeight / animStart;
+
+                if( animItemHeight> window.innerHeight ){
+                    animItemPoint = window.innerHeight - window.innerHeight / animStart;
+                }
+
+
+                if( (pageYOffset > animItemOffset - animItemPoint) && pageYOffset < (animItemOffset +  animItemHeight)){
+                    animItem.classList.add('_active')
+                }else{
+                    if( !animItem.classList.contains('_anim-no-hide') ){
+                        animItem.classList.remove('_active')
+                    }
+                    
+                }
+            }
+            
+        }
+        function offset(el){
+            const rect = el.getBoundingClientRect(),
+                scrollLeft = window.pageXOffset || document.documentElement.scrollLeft,
+                scrollTop = window.pageYOffset || document.documentElement.scrollTop;
+            return{ top: rect.top + scrollTop, left: rect.left + scrollLeft }
+
+        }
+        
+        animOnScroll();
+    }
 
 })

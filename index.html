@@ -16,6 +16,7 @@
     <link rel="stylesheet" href="icon/home_mail_phone/fontello.css">
     <link rel="stylesheet" href="icon/profile_icon/fontello.css">
     <link rel="stylesheet" href="icon/social_links/fontello.css">
+    <link rel="stylesheet" href="icon/search/fontello.css">
     <link rel="stylesheet" href="https://unpkg.com/swiper/swiper-bundle.min.css" />
     <link rel="stylesheet" href="css/style.css">
 </head>
@@ -245,9 +246,9 @@
                                                     </div>
                                                    
                                                 </div>
-                                                <div class="img">
+                                                <a href="#" class="img">
                                                     <img src="img/prod_item/img1.png" alt="">
-                                                </div>
+                                                </a>
                                                 <div class="txt">
                                                     <div class="name_prod">
                                                         <span>Pl Lotion</span>
@@ -272,9 +273,9 @@
                                                     </div>
                                                    
                                                 </div>
-                                                <div class="img">
+                                                <a href="#" class="img">
                                                     <img src="img/prod_item/img2.png" alt="">
-                                                </div>
+                                                </a>
                                                 <div class="txt">
                                                     <div class="name_prod">
                                                         <span>Pl Serum</span>
@@ -299,9 +300,9 @@
                                                     </div>
                                                    
                                                 </div>
-                                                <div class="img">
+                                                <a href="#" class="img">
                                                     <img src="img/prod_item/img3.png" alt="">
-                                                </div>
+                                                </a>
                                                 <div class="txt">
                                                     <div class="name_prod">
                                                         <span>Body Milk</span>
@@ -326,9 +327,9 @@
                                                     </div>
                                                    
                                                 </div>
-                                                <div class="img">
+                                                <a href="#" class="img">
                                                     <img src="img/prod_item/img4.png" alt="">
-                                                </div>
+                                                </a>
                                                 <div class="txt">
                                                     <div class="name_prod">
                                                         <span>Eye Roll</span>
@@ -418,6 +419,13 @@
                                     c7.449,0,13.512,6.065,13.512,13.516v9.748H37.561V19.266z M6.04,122.283l8.3-87.518h20.343h32.783h19.223l8.301,87.518H6.04z"></path>
                             </svg>
                             <span class="count_basket_prod">0</span>
+                            <div class="basket_down_menu">
+                                <ul>
+                                    <li>
+                                        <p>No products in the cart.</p>
+                                    </li>
+                                </ul>
+                            </div>
                         </a>
 
                         <a href="#" class="search">
@@ -425,14 +433,58 @@
                                 <circle cx="1.5" cy="1.5" r="1.5"></circle>
                                 <circle cx="9.5" cy="1.5" r="1.5"></circle>
                                 <circle cx="17.5" cy="1.5" r="1.5"></circle>
-                                <circle cx="1.5" cy="9.5" r="1.5"></circle>
+                                <circle cx="1.5" cy="9.5" r="1.5" class="anim1"></circle>
                                 <circle cx="9.5" cy="9.5" r="1.5"></circle>
                                 <circle cx="17.5" cy="9.5" r="1.5"></circle>
-                                <circle cx="1.5" cy="17.5" r="1.5"></circle>
-                                <circle cx="9.5" cy="17.5" r="1.5"></circle>
+                                <circle cx="1.5" cy="17.5" r="1.5" class="anim2"></circle>
+                                <circle cx="9.5" cy="17.5" r="1.5" class="anim3"></circle>
                                 <circle cx="17.5" cy="17.5" r="1.5"></circle>
                             </svg>
+
                         </a>
+                        <div class="secrch_block_menu">
+                            <div class="btn_close_searchMenu ">
+                                <svg class="qodef-svg-closer" xmlns="http://www.w3.org/2000/svg" enable-background="new 0 0 19 19" viewBox="0 0 19 19" x="0px" y="0px" width="19px" height="19px" xml:space="preserve" version="1.1">
+                                    <circle cx="1.5" cy="1.5" r="1.5"></circle>
+                                    <circle cx="9.5" cy="1.5" r="1.5" class="anim_btn1"></circle>
+                                    <circle cx="17.5" cy="1.5" r="1.5" class="anim_btn2"></circle>
+                                    <circle cx="9.5" cy="9.5" r="1.5"></circle>
+                                    <circle cx="17.5" cy="9.5" r="1.5" class="anim_btn3"></circle>
+                                    <circle cx="17.5" cy="17.5" r="1.5"></circle>
+                                </svg>
+                            </div>
+
+
+
+                            <div class="top">
+                                <div class="secrch_menu_title">
+                                    <span>Welcome</span>
+                                    <h2>Organic products</h2>
+                                    <p>Advertising is the way great brands get to be great brands prospectum sociis natoque.</p>
+                                </div>
+                                <form action="#">
+                                    <div class="search_input">
+                                        <input type="txt" name="search" placeholder="Search">
+                                        <button>
+                                            <i class="icon-search"></i>
+                                        </button>
+                                        
+                                    </div>
+                                    
+                                </form>
+                            </div>
+                           
+
+                            <div class="bot">
+                                <h3>Follow and socialize with us</h3>
+                                <div class="follow">
+                                    
+                                    <a href="#"> <i class="icon-facebook"></i> </a>
+                                    <a href="#"> <i class="icon-twitter"></i> </a>
+                                    <a href="#"> <i class="icon-instagram"></i> </a>
+                                </div>
+                            </div>
+                        </div>
                     </div>
                 </div>
         </section>
@@ -768,11 +820,12 @@
         </section>
 
 
-        <section class="lapasta">
+        <section class="lapasta ">
             <div class="lapasta_wrapper">
 
-                <div class="lapasta_item">
-                    <div class="txt">
+                <div class="lapasta_item  anim-items _anim-no-hide">
+
+                    <div class="txt ">
                         <span>Morning starter</span>
                         <h2> Apple pie <br> Arizona desert </h2>
                         <div class="line"></div>
@@ -780,7 +833,7 @@
                             Partem ei estos. torquatos nec eu, detr periculis ex, nihil expetendis in  mei. Mei an pericula euripidis hinc.
                         </p>
                     </div>
-                    <div class="center_line_num">
+                    <div class="center_line_num ">
                         <div class="line"></div>
 
                         <div class="num_bock">
@@ -790,15 +843,22 @@
                         </div>
                         
                     </div>
-                    <div class="img">
-                        <img src="img/lapasta/img1.jpg" alt="">
+                    <div class="img ">
+                        <div class="img_photo_item">
+                            <img src="img/lapasta/img1.jpg" alt="" >
+                        </div>
+                        
                     </div>
                 </div>
-                <div class="lapasta_item lapasta_item_two">
+
+                <div class="lapasta_item lapasta_item_two anim-items _anim-no-hide">
                    
                     <div class="img">
+                        <div class="img_photo_item">
+                            <img src="img/lapasta/img2.jpg" alt="">
+                        </div>
                         <img src="img/lapasta/workflow-label.png" alt="" class="label">
-                        <img src="img/lapasta/img2.jpg" alt="">
+                        
                     </div>
                     <div class="center_line_num">
                         <div class="line"></div>
@@ -810,7 +870,7 @@
                         </div>
                         
                     </div>
-                    <div class="txt">
+                    <div class="txt ">
                         <span>Course of the day</span>
                         <h2>  Today’s meal: <br> Tagliatelle pasta </h2>
                         <div class="line"></div>
@@ -820,8 +880,8 @@
                     </div>
                     
                 </div>
-                <div class="lapasta_item lapasta_item_there">
-                    <div class="txt">
+                <div class="lapasta_item lapasta_item_there anim-items _anim-no-hide">
+                    <div class="txt ">
                         <span>New organic recipe</span>
                         <h2>  Gluten-free <br> flat fettuccine  </h2>
                         <div class="line"></div>
@@ -841,7 +901,10 @@
                         
                     </div>
                     <div class="img">
-                        <img src="img/lapasta/img3.jpg" alt="">
+                        <div class="img_photo_item">
+                            <img src="img/lapasta/img3.jpg" alt="">
+                        </div>
+                        
                     </div>
                 </div>
             </div>
