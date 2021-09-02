@@ -2006,6 +2006,11 @@ ul{
    text-align: center;
    
 }
+.mySwiper2 .swiper-slide img{
+    width: 600px;
+    height: 600px;
+    object-fit: cover;
+}
 .mySwiper .swiper-slide{
     text-align: center;
 }
