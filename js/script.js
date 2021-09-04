@@ -19,10 +19,7 @@ $(document).ready(function () {
     })
 
     $('.featured_items_product').hover(function () {
-        $(this).find('.quick_view').css({
-            'right': '-46px',
-            'transition': '0.3s'
-        })
+        $(this).find('.quick_view').addClass('quick_view-active')
         $(this).find('.add_cart_btn').css({
             'transform': 'translateX(0%)',
             'transition': '0.3s'
@@ -33,10 +30,7 @@ $(document).ready(function () {
         })
 
     }, function () {
-        $(this).find('.quick_view').css({
-            'right': '-83px',
-            'transition': '0.3s'
-        })
+        $(this).find('.quick_view').removeClass('quick_view-active')
         $(this).find('.add_cart_btn').css({
             'transform': 'translateX(-100%)',
             'transition': '0.3s'
